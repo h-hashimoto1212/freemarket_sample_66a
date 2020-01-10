@@ -15,4 +15,6 @@ class User < ApplicationRecord
   validates :last_name, :first_name, :last_name_kana, :first_name_kana, :birthdate, presence: true
   validates :nickname, :email, :tel, presence: true, uniqueness: true
   validates :password, presence: true, length: { minimum: 7 }
+
+  mount_uploader :icon, ImageUploader
 end
