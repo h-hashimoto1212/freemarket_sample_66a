@@ -51,5 +51,5 @@ production:
   <<: *default
   database: freemarket_sample_66a__production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: <%= Rails.application.credentials[:db][:DATABASE_PASSWORD] %>
   socket: /var/lib/mysql/mysql.sock
